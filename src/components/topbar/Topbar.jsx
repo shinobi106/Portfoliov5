@@ -1,6 +1,6 @@
 
 import './topbar.scss'
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import EmailIcon from '@mui/icons-material/Email';
 
 export default function Topbar({menuOpen, setmenuOpen}) {
   return (
@@ -9,8 +9,8 @@ export default function Topbar({menuOpen, setmenuOpen}) {
            <div className='left'>
             <a href='#intro' className='logo'>fightClub..</a>
             <div className='itemContainer'>
-            <PersonOutlineIcon className='icon'/>
-            <span>9627593053</span>
+            <EmailIcon className='icon'/>
+            <span>arnavt65@gmail.com</span>
 
             </div>
            </div>

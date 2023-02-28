@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     transition: all 1.25s ease;
-    background-color: white;
+    background-color: #EAEAEA;
 
 
     &.active{
@@ -29,9 +29,11 @@
         padding: 0;
         list-style: none;
         font-size: 30px;
-        color: white;
-        font-weight: 400;
+        color: #EAEAEA;
+        font-weight: 200;
         width: 60%;
+        
+       
         
         li{
             margin-bottom: 20px;
@@ -43,6 +45,7 @@
             
             &:hover{
                 font-weight: 600;
+                color: #08D9D6;
             }
         }
     }
