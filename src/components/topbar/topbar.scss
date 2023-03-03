@@ -9,17 +9,23 @@
     top: 0px;
     z-index: 3;
     transition: all 1.25s ease;
+   
 
     .wrapper{
         padding: 10px 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        transition: all 0.5s ease;
+        
         .left{
 
             .itemContainer{
                 display: flex;
                 align-items: center;
+                @include mobile{
+                    display: none;
+                  }
 
                 .icon{
                     font-size: 20px;
@@ -42,6 +48,15 @@
             align-items: center;
         }
         .right{
+            display: flex;
+            .d{
+               padding-right: 33px;
+                    width: 100px;
+                    @include mobile{
+                        display: none;
+                    }
+                    cursor: pointer;
+            }
 
              .hamburger{
                 width: 30px;
@@ -50,6 +65,7 @@
                 flex-direction: column;
                 justify-content: space-between;
                 cursor: pointer;
+                
                 
 
                 span{
@@ -63,6 +79,25 @@
                 }
              }
 
+        }
+        &.dark{
+            background-color: $mainColor;
+            color: white;
+            .hamburger{
+                span{
+                    &:first-child{
+                        background-color: white;
+                        
+                    }
+                    &:nth-child(2){
+                        background-color: white;
+                    }
+                    &:last-child{
+                        background-color: white;
+                        
+                    }
+                }
+            }
         }
     }
     &.active{
@@ -85,4 +120,5 @@
             }
         }
     }
+   
 }

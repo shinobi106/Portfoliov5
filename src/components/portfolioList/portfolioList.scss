@@ -6,6 +6,9 @@
     padding: 7px;
     border-radius: 15px;
     cursor: pointer;
+    @include mobile{
+        display: none;
+      }
 
     &.active{
         background-color: $mainColor;

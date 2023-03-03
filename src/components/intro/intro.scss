@@ -1,9 +1,18 @@
 @import "../../global.scss";
 
+
+
 .intro{
     background-color: white;
     display: flex;
-
+    @include mobile{
+      flex-direction: column;
+      align-items: center;
+      &.dark{
+        background-color: $mainColor;
+      }
+    
+    }
 
       .left{
         flex: 0.5;
@@ -15,7 +24,7 @@
             border-radius: 50%;
             
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: center;
             float: right;
             animation: colorChange 4s infinite ease-in-out;
@@ -30,10 +39,16 @@
              
           }
             
-
+                @include mobile{
+                  align-items: flex-start;
+                }
 
              img{
                 height: 95%;
+
+                @include mobile{
+                  height: 50%;
+                }
                 
              }
           }
@@ -50,10 +65,17 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            @include mobile{
+              padding-left: 0;
+              align-items: center;
+            }
            
             h1{
                 font-size: 90px;
                 margin: 10px 0;
+                @include mobile{
+                  font-size: 50px;
+                }
                 
                 
             }
@@ -67,6 +89,9 @@
                     font-size: inherit;
                     color: #FF2E63;
                 }
+                @include mobile{
+                  font-size: 30px;
+                }
             }
 
           }
@@ -74,10 +99,15 @@
             position: absolute;
             bottom: 10px;
             left: 20%;
+            @include mobile{
+              left: 30%;
+              bottom: 0px;
+            }
 
             img{
                 width: 100px;
                 animation: arrowBlink 2s infinite;
+               
             }
 
             @keyframes arrowBlink {
@@ -88,5 +118,5 @@
           }
         
       }
-    
+      
 }

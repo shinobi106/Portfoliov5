@@ -15,17 +15,38 @@ export default function Work() {
     },
     {
       id: "2",
-      icon: "./assets/smartphone.png",
+      icon: "./assets/globe.png",
       title: "Notes App",
       desc: "Notes App built using React.js",
       img: "./assets/notes.png"
     },
     {
       id: "3",
-      icon: "./assets/smartphone.png",
+      icon: "./assets/leetcode.png",
       title: "Blog Website",
       desc: "A Daily Blog built using EJS templates and Express.js",
       img: "./assets/web.png"
+    },
+    {
+      id: "4",
+      icon: "./assets/smartphone.png",
+      title: "Todo List",
+      desc: "A Todo List App made using express and Node.js",
+      img: "./assets/todo.png"
+    },
+    {
+      id: "5",
+      icon: "./assets/smartphone.png",
+      title: "News Letter",
+      desc: "A News Letter service made using Mail Chimps API",
+      img: "./assets/newsletter.png"
+    },
+    {
+      id: "6",
+      icon: "./assets/smartphone.png",
+      title: "Simon Game",
+      desc: "A simnple simon Game built using vanila JavaScript",
+      img: "./assets/simon.png"
     },
 
   ];

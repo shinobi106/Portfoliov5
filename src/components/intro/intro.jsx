@@ -3,7 +3,8 @@ import './intro.scss'
 
 import { init } from 'ityped'
 
-export default function Intro() {
+
+export default function Intro({darkmode}) {
   const textRef = useRef();
 
   useEffect(() => {
@@ -15,7 +16,7 @@ export default function Intro() {
 
   },[]);
   return (
-    <div className='intro' id='intro'>
+    <div className={'intro ' + (darkmode && 'dark')} id='intro'>
        <div className='left'>
         <div className='imageContainer'>
           <img src='assets/iphone6.png' alt='myphoto'></img>

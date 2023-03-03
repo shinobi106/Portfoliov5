@@ -41,13 +41,22 @@ export default function Portfolio() {
              <img src='assets/web.png' alt=''/>
              <h3>Daily Blog</h3>
          </div>
-         <div className='item'>
-             <img src='assets/notes.png' alt=''/>
-             <h3>Notes App</h3>
-         </div>
+        
          <div className='item'>
              <img src='assets/port.png' alt=''/>
              <h3>Portfolio v4</h3>
+         </div>
+         <div className='item'>
+             <img src='assets/newsletter.png' alt=''/>
+             <h3>News Letter</h3>
+         </div>
+         <div className='item'>
+             <img src='assets/simon.png' alt=''/>
+             <h3>Simon Game</h3>
+         </div>
+         <div className='item'>
+             <img src='assets/todo.png' alt=''/>
+             <h3>Todo List</h3>
          </div>
          
       </div>

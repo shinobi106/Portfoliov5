@@ -1,3 +1,110 @@
+@import "../../global.scss";
+
 .contact{
-    background-color: lightblue;
+    background-color: white;
+    display: flex;
+    @include mobile{
+        flex-direction: column;
+    }
+
+    .left{
+        flex: 1;
+        overflow: hidden;
+
+        img{
+            height: 100%;
+            padding-left: 50px;
+            @include mobile{
+                padding-left: 10px;
+            }
+            
+        }
+    }
+    .right{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .socials{
+            justify-content: space-between;
+            color: black;
+            a{
+                margin-right: 15px;
+                color: black;
+            }
+           
+            
+        }
+        .footer{
+            padding-top: 20px;
+            font-weight: 300;
+            font-size: 17px;
+            
+        }
+
+        h2{
+            font-size: 30px;
+
+        }
+        form{
+            width: 70%;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            @include mobile{
+                width: 50%;
+                height: 50%;
+            }
+
+            input{
+                width: 300px;
+                height: 30px;
+                font-size: 14px;
+                @include mobile{
+                    width: 150px;
+                    height: 20px;
+                }
+
+            }
+            textarea{
+                width: 300px;
+                height: 200px;
+                font-size: 14px;
+                @include mobile{
+                    width: 150px;
+                    height: 70px;
+                }
+
+            }
+
+            button{
+                width: 150px;
+                height: 30px;
+                color: white;
+                background-color: #FF2E63;
+                border: none;
+                
+                border-radius: 10px;
+                cursor: pointer;
+                @include mobile{
+                    width: 100px;
+                    height: 20px;
+                }
+
+            }
+            .reply{
+                font-weight: 300; 
+                color: green;
+                @include mobile{
+                    font-size: 12px;
+                }
+
+            }
+        }
+    }
+    
 }
