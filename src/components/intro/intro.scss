@@ -1,9 +1,23 @@
 @import "../../global.scss";
 
+$bg-color: hsl(0, 0%, 0%);
+$dot-color: hsl(0, 0%, 100%);
 
+// Dimensions
+$dot-size: 1px;
+$dot-space: 30px;
 
 .intro{
-    background-color: white;
+    // background: url(../../../public/assets/background.jpg) center;
+    // background-size: cover;
+    background:
+		linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+		$dot-color;
+	background-size: $dot-space $dot-space;
+    
+    
+
     display: flex;
     @include mobile{
       flex-direction: column;
@@ -15,15 +29,17 @@
     }
 
       .left{
+        
         flex: 0.5;
         overflow: hidden;
           .imageContainer{
             width: 700px;
             height: 700px;
-            background-color: $mainColor;
+            background-color: red;
             border-radius: 50%;
-            
+            position: relative;
             display: flex;
+            overflow: hidden;
             align-items: flex-end;
             justify-content: center;
             float: right;
@@ -32,7 +48,7 @@
               50%{
                  border-radius: 45%;
                  border-top-right-radius: 65%;
-                 background-color: crimson;
+                 background-color: rgb(255, 0, 0);
                  
                  
               }
@@ -44,10 +60,18 @@
                 }
 
              img{
-                height: 95%;
+                height: 120%;
+                
+                left: 50px;
+                bottom: -200px;
+                
+                position: absolute;
+                text-align: center;
 
                 @include mobile{
-                  height: 50%;
+                  height: 60%;
+                  left: 200px;
+                  bottom: 250px;
                 }
                 
              }
@@ -72,6 +96,7 @@
            
             h1{
                 font-size: 90px;
+                color: white;
                 margin: 10px 0;
                 @include mobile{
                   font-size: 50px;
@@ -81,13 +106,15 @@
             }
             h2{
                 font-size: 35px;
+                color: white;
 
             }
             h3{
                 font-size: 30px;
+                color: white;
                 span{
                     font-size: inherit;
-                    color: #FF2E63;
+                    color: #fe0000;
                 }
                 @include mobile{
                   font-size: 30px;
@@ -99,13 +126,14 @@
             position: absolute;
             bottom: 10px;
             left: 20%;
+            transform: rotate(-90deg);
             @include mobile{
               left: 30%;
               bottom: 0px;
             }
 
             img{
-                width: 100px;
+                width: 50px;
                 animation: arrowBlink 2s infinite;
                
             }

@@ -1,7 +1,18 @@
 @import "../../global.scss";
 
+$bg-color: hsl(0, 0%, 0%);
+$dot-color: hsl(0, 0%, 100%);
+
+// Dimensions
+$dot-size: 1px;
+$dot-space: 30px;
+
 .test{
-    background-color: white;
+    background:
+		linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+		$dot-color;
+	background-size: $dot-space $dot-space;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -11,6 +22,7 @@
     }
      h1{
         font-size: 50px;
+        color: red;
 
         @include mobile{
             font-size: 20px;
@@ -36,7 +48,8 @@
             width: 250px;
             height: 70%;
             border-radius: 10px;
-            box-shadow: 0px 0px 15px -8px black;
+            background-color: whitesmoke;
+            box-shadow: 0px 0px 15px -8px rgb(255, 255, 255);
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -72,7 +85,8 @@
             }
             &:hover{
                 transform: scale(1.1);
-                background-color: whitesmoke;
+                box-shadow: 7px 7px red;
+                background-color: rgb(255, 255, 255);
             }
             
 
@@ -93,6 +107,7 @@
                         border-radius: 50%;
                         object-fit: cover;
                         margin: 0 30px;
+                        
                         @include mobile{
                            height: 30px;
                            width: 30px;
@@ -103,8 +118,10 @@
             }
             .center{
                 padding: 10px;
-                background-color: rgb(253, 241, 241);
+                background-color:white;
                 border-radius: 10px;
+                color: black;
+                
                 @include mobile{
                     display: none;
                 }
@@ -116,6 +133,7 @@
                 flex-direction: column;
                 h3{
                     margin-bottom: 5px;
+                    
                     @include mobile{
                       font-size: 14px;
                       text-align: center;

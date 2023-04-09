@@ -1,7 +1,18 @@
 @import "../../global.scss";
 
+
+$bg-color: hsl(0, 0%, 100%);
+$dot-color: hsl(0, 0%, 0%);
+
+// Dimensions
+$dot-size: 1.7px;
+$dot-space: 30px;
 .contact{
-    background-color: white;
+    background:
+		linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+		$dot-color;
+	background-size: $dot-space $dot-space;
     display: flex;
     @include mobile{
         flex-direction: column;
@@ -85,11 +96,14 @@
                 width: 150px;
                 height: 30px;
                 color: white;
-                background-color: #FF2E63;
+                background-color: #ff0000;
                 border: none;
-                
-                border-radius: 10px;
+                transition: all 0.5s ease;
+                border-radius: 5px;
                 cursor: pointer;
+                &:hover{
+                    box-shadow: 5px 5px black;
+                }
                 @include mobile{
                     width: 100px;
                     height: 20px;

@@ -1,8 +1,19 @@
 @import "../../global.scss";
 
+$bg-color: hsl(0, 100%, 50%);
+$dot-color: hsl(0, 0%, 0%);
+
+// Dimensions
+$dot-size: 1.7px;
+$dot-space: 30px;
+
 
 .work{
-    background-color: #FF2E63;
+    background:
+    linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+    linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+    $dot-color;
+background-size: $dot-space $dot-space;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,6 +1,21 @@
 @import "../../global.scss";
+$bg-color: hsl(0, 0%, 0%);
+$dot-color: hsl(0, 0%, 100%);
+
+// Dimensions
+$dot-size: 1px;
+$dot-space: 30px;
+
 .portfolio{
-    background-color: white;
+    background:
+		linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+		$dot-color;
+	background-size: $dot-space $dot-space;
+    
+
+
+
     padding-top: 30px;
     display: flex;
     flex-direction: column;
@@ -9,22 +24,26 @@
 
     h1{
         font-size: 50px;
-
+        color: red;
+        
         @include mobile{
             font-size: 30px;
+            height: 120px;
           }
     }
 
     ul{
-        margin: 10px;
+        margin: 20px;
         padding: 0;
         list-style: none;
         display: flex;
+        color: white;
 
         @include mobile{
             margin: 10px 0;
             flex-wrap: wrap;
             justify-content: center;
+            height: 100px;
           }
         
         
@@ -45,7 +64,7 @@
         .item{
             width: 400px;
             height: 250px;
-            border-radius: 20px;
+            border-radius: 10px;
             border: 1px solid white;
             margin: 10px 20px;
             display: flex;
@@ -57,27 +76,29 @@
             overflow: hidden;
 
             @include mobile{
-                width: 130px;
-                height: 100px;
+                width: 300px;
+                height: 200px;
               }
             
             h3{
                 position: absolute;
                 font-size: 20px;
-
+                color: white;
             }
 
             img{
                 
-                object-fit: fill;
+                object-fit: cover;
                 z-index: 1;
                 width: 100%;
-                border-radius: 20px;
+                height: 100%;
+                transition: all 0.5s ease;
                 
             }
             &:hover{
-                background-color: $mainColor;
+                background-color: black;
                 img{
+                    filter: blur(3px);
                     opacity: 0.2;
                     z-index: 0;
                 }
